@@ -13,7 +13,7 @@ const searchPath = (before, after) => {
 }
 
 const getDiffList = (before, after, path) => {
-    var afterRes = '';
+    let afterRes = '';
     let pX = 0;
     let pY = 0;
     let pre = '';
@@ -58,8 +58,8 @@ const delNode = (posX, posY, path, i) => {
 }
 
 const getPaht = (before, after, posX, posY, path, map) => {
-  var c = posX.length;//終端の個数
-  var endPath = null;
+  const c = posX.length;//終端の個数
+  let endPath = undefine;
   for(let i = 0; i < c; i++){//各終端について
     while(posX[i]!=before.length||posY[i]!=after.length){//編集回数が1増える（追加か削除を行う）か、比較し終えるまで繰り返す
       if(before.charAt(posX[i])==after.charAt(posY[i])){
